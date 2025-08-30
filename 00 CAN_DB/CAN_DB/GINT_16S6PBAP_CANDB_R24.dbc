@@ -1,0 +1,219 @@
+// Create by TSMaster 
+
+VERSION "created"
+
+NS_ :
+
+BS_:
+
+BU_:
+
+
+BO_ 1552 BPA_Infro: 8 Vector__XXX
+ SG_ BPA_Type : 0|8@1+ (1,0) [0|255] "Type" Vector__XXX
+ SG_ BPA_SW_Ver : 8|8@1+ (1,0) [0|255] "VER" Vector__XXX
+ SG_ BPA_Serial : 16|8@1+ (1,0) [0|255] "S" Vector__XXX
+ SG_ BPA_Parallel : 24|8@1+ (1,0) [0|255] "P" Vector__XXX
+ SG_ BPA_NorVolt : 32|16@1+ (0.1,0) [0|100] "V" Vector__XXX
+ SG_ BPA_Capacity : 48|16@1+ (0.1,0) [0|500] "Ah" Vector__XXX
+
+BO_ 1553 BPA_Calc: 8 Vector__XXX
+ SG_ BPA_Volt_Total : 0|16@1+ (0.1,0) [0|100] "V" Vector__XXX
+ SG_ BPA_Curr_Total : 16|16@1- (0.1,0) [-500|500] "A" Vector__XXX
+ SG_ BPA_SOC : 32|16@1- (0.1,0) [-10|110] "%" Vector__XXX
+ SG_ BPA_SOH : 48|16@1+ (0.1,0) [0|100] "%" Vector__XXX
+
+BO_ 1555 BPA_ProtectState: 8 Vector__XXX
+ SG_ BPA_Wn_Dischager_OC : 0|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Chager_OC : 1|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_SOC_OV : 2|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_SOC_UV : 3|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_OV : 4|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_UV : 5|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Cell_OV : 6|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Cell_UV : 7|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Cell_UnbalV : 8|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_DisCharger_Cell_OT : 9|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Charger_Cell_OT : 10|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_DisCharger_Cell_UT : 11|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Charger_Cell_UT : 12|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BSA_Wn_Cell_UnbalT : 13|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Discharger_UnBPAWR : 14|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Wn_Charger_UnBPAWR : 15|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Dischager_OC : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BPA_Prtct_Chager_OC : 25|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_SOC_OV : 26|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_SOC_Un : 27|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_OV : 28|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_UV : 29|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Cell_OV : 30|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Cell_UV : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BPA_Prtct_Cell_UnbalV : 32|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_DisCharger_Cell_OT : 33|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Charger_Cell_OT : 34|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_DisCharger_Cell_UT : 35|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Charger_Cell_UT : 36|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Cell_UnbalT : 37|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Discharger_UnBPAWR : 38|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Charger_UnBPAWR : 39|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_Rly_Err : 40|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_ISOSPI_Err : 41|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_CAN_COM_Err : 42|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_CT_COM_Err : 43|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BPA_Prtct_ISORESIS_Err : 44|1@1+ (1,0) [0|1] "F" Vector__XXX
+
+BO_ 1556 BPA_POWER: 8 Vector__XXX
+ SG_ BPA_Charge_Cont_PL : 0|16@1+ (0.1,0) [0|20] "KW" Vector__XXX
+ SG_ BPA_Discharge_Cont_PL : 16|16@1+ (0.1,0) [0|20] "kW" Vector__XXX
+ SG_ BPA_Charge_Peak_PL : 32|16@1+ (0.1,0) [0|20] "kW" Vector__XXX
+ SG_ BPA_Discharge_Peak_PL : 48|16@1+ (0.1,0) [0|20] "kW" Vector__XXX
+
+BO_ 1557 BPA_Volt_state: 8 Vector__XXX
+ SG_ BSA_Cell_MaxV : 0|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_Cell_MinV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_Cell_AVGV : 32|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_Cell_DeviV : 48|16@1+ (1,0) [0|1000] "mV" Vector__XXX
+
+BO_ 1558 BPA_Temps_state: 8 Vector__XXX
+ SG_ BPA_Cell_MaxT : 0|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+ SG_ BPA_Cell_MinT : 16|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+ SG_ BPA_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+ SG_ BPA_Cell_DeviT : 48|16@1+ (1,0) [0|100] "deg" Vector__XXX
+
+BO_ 1559 BPA_VT_Position: 8 Vector__XXX
+ SG_ BPA_Max_Volt_Pos : 0|16@1+ (1,0) [0|255] "VP" Vector__XXX
+ SG_ BPA_Min_Volt_Pos : 16|16@1+ (1,0) [0|255] "VP" Vector__XXX
+ SG_ BPA_Max_Temps_Pos : 0|16@1+ (1,0) [0|255] "TP" Vector__XXX
+ SG_ BPA_Min_Temps_pos : 48|16@1+ (1,0) [0|255] "TP" Vector__XXX
+
+BO_ 1560 BPA_MD1_State: 8 Vector__XXX
+ SG_ BPA_BM1_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM1_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM1_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1561 BPA_MD2_State: 8 Vector__XXX
+ SG_ BPA_BM2_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM2_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM2_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1562 BPA_MD3_State: 8 Vector__XXX
+ SG_ BPA_BM3_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM3_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM3_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1563 BPA_MD4_State: 8 Vector__XXX
+ SG_ BPA_BM4_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM4_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM4_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1564 BPA_MD5_State: 8 Vector__XXX
+ SG_ BPA_BM5_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM5_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM5_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1565 BPA_MD6_State: 8 Vector__XXX
+ SG_ BPA_BM6_Volt_Total : 0|16@1+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ BPA_BM6_Cell_AVGV : 16|16@1+ (0.001,0) [0.000|4.5] "V" Vector__XXX
+ SG_ BPA_BM6_Cell_AVGT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+
+BO_ 1792 HMI: 8 Vector__XXX
+ SG_ HMI1_Mode : 0|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ HMI1_Rly_Enable : 1|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ HMI1_Cell_Volt_Request : 2|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ HMI1_Cell_Temps_Request : 3|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ HMI1_Cell_Balacne_Enable : 4|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ HMI1_Cell_AGVT : 32|16@1- (0.1,0) [-30|100] "deg" Vector__XXX
+ SG_ HM1I_Cell_MinV : 48|16@1+ (0.1,0) [0|4.5] "V" Vector__XXX
+ SG_ HMI1_Reset : 8|1@1+ (1,0) [0|1] "F" Vector__XXX
+
+BO_ 1794 CHA: 8 Vector__XXX
+ SG_ CHA_SW_Ver : 0|16@1+ (1,0) [0|1] "VER" Vector__XXX
+ SG_ CHA_VOLTATE : 16|16@1+ (0.1,0) [0|255] "Num" Vector__XXX
+ SG_ CHA_Current : 32|16@1+ (0.1,0) [0|4.5] "a" Vector__XXX
+ SG_ CHA_DO_STAUTE : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CHA_Protect_ACOV : 49|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ CHA_Protect_ACUn : 50|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ CHA_Protect_DCOV : 52|1@1+ (1,0) [0|1] "f" Vector__XXX
+ SG_ CHA_Protect_DCUn : 53|1@1+ (1,0) [0|1] "f" Vector__XXX
+ SG_ CHA_Protect_DCOC : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CHA_CANRx_ERR : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 962 CAB_CT: 8 Vector__XXX
+ SG_ IP_m : 7|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ ERR_Sta : 32|1@1+ (1,0) [0|1] "Err" Vector__XXX
+ SG_ ERR_Info : 39|7@0+ (1,0) [0|1] "Code" Vector__XXX
+ SG_ Variable1 : 47|24@0+ (1,0) [0|16777215] "" Vector__XXX
+
+BO_ 1566 Charger: 8 Vector__XXX
+ SG_ ConstantVoltage : 0|16@1+ (0.1,0) [16|1] "V" Vector__XXX
+ SG_ ConstantCurrent : 16|16@1- (0.1,0) [0|1] "A" Vector__XXX
+ SG_ BAT_Voltage : 32|16@1+ (0.1,0) [0|1] "V" Vector__XXX
+ SG_ BAT_Current : 48|16@1- (0.1,0) [0|1] "A" Vector__XXX
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ VCU_BSAReset : 8|1@1+ (1,0) [0|1] "Reset" Vector__XXX
+
+BO_ 1554 BPA_State: 8 Vector__XXX
+ SG_ BPA_Divice_Status : 7|8@0+ (1,0) [0|10] "S" Vector__XXX
+ SG_ BPA_Protect_Status : 8|8@1+ (1,0) [0|8] "S" Vector__XXX
+ SG_ BPA_Balance : 16|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ BPA_Neg_Rly : 17|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ BPA_Pos_Rly : 18|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ BPA_PreChar_Rly : 19|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ BPA_MSD_AUX : 20|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_SysStatus : 32|2@1+ (1,0) [0|0] "S" Vector__XXX
+ SG_ Status_ProtectStatus : 35|3@1+ (1,0) [0|3] "S" Vector__XXX
+ SG_ Status_SysMachine : 38|3@1+ (1,0) [0|8] "M" Vector__XXX
+ SG_ Status_RlyMachine : 41|3@1+ (1,0) [0|8] "M" Vector__XXX
+ SG_ Status_SocMachine : 44|3@1+ (1,0) [0|8] "M" Vector__XXX
+ SG_ Status_INITOK : 47|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_Balance : 48|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_NRlyDO : 49|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_PRlyDO : 50|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_ProRlyDO : 51|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_MSDErr : 52|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_RlyErr : 53|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_DisCharMode : 54|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_BalanceMode : 55|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Status_HMICOM : 56|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_INCAN : 59|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_Aalarm : 60|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_Protect : 61|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_CellVoltOk : 62|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_CellTempsOk : 63|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_HMIBalance : 57|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Status_ISOSPIErr : 58|1@1+ (1,0) [0|0] "F" Vector__XXX
+
+BO_ 1567 BPA_CHA_State: 8 Vector__XXX
+ SG_ BatCHA_OC : 0|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_SOCOV : 1|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_SOCUn : 2|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ BatCHA_NRly : 3|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_PRly : 4|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_ProRly : 5|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_RlyErr : 6|1@1+ (1,0) [0|1] "F" Vector__XXX
+ SG_ BatCHA_Start : 7|1@1+ (1,0) [0|1] "S" Vector__XXX
+
+BO_ 1536 VCU_CMD: 8 Vector__XXX
+ SG_ Ifcu_BSAReset : 0|1@1+ (1,0) [0|0] "F" Vector__XXX
+ SG_ Ifcu_BSAHldShutdown : 9|1@1+ (1,0) [0|0] "F" Vector__XXX
+
+CM_ SG_ 1792 HMI1_Mode "VCU CAN 통신을 분리 된 상태에서 관리자가 Battery System 상태를 모니터링";
+";
+CM_ SG_ 1554 BPA_Protect_Status "0x00 : Normal
+";
+BA_DEF_ BO_ "Receivable" STRING ;
+BA_DEF_ BO_ "Sendable" STRING ;
+BA_DEF_ SG_ "DisplayDecimalPlaces" INT 0 65535;
+BA_DEF_ SG_ "HexadecimalOutput" STRING ;
+BA_DEF_ SG_ "LongName" STRING ;
+BA_DEF_  "Title" STRING ;
+BA_DEF_DEF_ "Receivable" "";
+BA_DEF_DEF_ "Sendable" "";
+BA_DEF_DEF_ "DisplayDecimalPlaces" 0;
+BA_DEF_DEF_ "HexadecimalOutput" "";
+BA_DEF_DEF_ "LongName" "";
+BA_DEF_DEF_ "Title" "canmatrix-Export";
+BA_ "Title" "Gint116S6P";
+BA_ "Receivable" BO_ 1552 "True";
+BA_ "Sendable" BO_ 1552 "False";
