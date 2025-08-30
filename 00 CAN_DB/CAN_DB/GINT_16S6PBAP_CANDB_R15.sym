@@ -1,0 +1,246 @@
+FormatVersion=5.0 // Do not edit this line!
+Title="Gint116S6P"
+
+{SEND}
+
+[HMI]
+ID=700h
+DLC=8
+Var=HMI1_Mode bit 0,1 /u:F // VCU CAN 통신을 분리 된 상태에서 관리자가 Battery System 상태를 모니터링
+Var=HMI1_Rly_Enable bit 1,1 /u:F
+Var=HMI1_Cell_Volt_Request bit 2,1 /u:F
+Var=HMI1_Cell_Temps_Request bit 3,1 /u:F
+Var=HMI1_Cell_Balacne_Enable bit 4,1 /u:F
+Var=HMI1_Cell_AGVT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+Var=HM1I_Cell_MinV unsigned 48,16 /u:V /f:0.1 /max:4.5
+Var=HMI1_Reset bit 8,1 /u:F
+
+{RECEIVE}
+
+[VCU]
+ID=600h
+DLC=8
+Var=VCU_BSAReset bit 8,1 /u:Reset
+
+[BPA_Infro]
+ID=610h
+DLC=8
+Var=BPA_Type char 0,8 /u:Type
+Var=BPA_SW_Ver char 8,8 /u:VER
+Var=BPA_Serial char 16,8 /u:S
+Var=BPA_Parallel char 24,8 /u:P
+Var=BPA_NorVolt unsigned 32,16 /u:V /f:0.1 /max:100
+Var=BPA_Capacity unsigned 48,16 /u:Ah /f:0.1 /max:500
+
+[BPA_Calc]
+ID=611h
+DLC=8
+Var=BPA_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:100
+Var=BPA_Curr_Total signed 16,16 /u:A /f:0.1 /min:-500 /max:500
+Var=BPA_SOC signed 32,16 /u:% /f:0.1 /min:-10 /max:110
+Var=BPA_SOH unsigned 48,16 /u:% /f:0.1 /max:100
+
+{SENDRECEIVE}
+
+[BPA_State]
+ID=612h
+DLC=8
+Var=BPA_Divice_Status char 0,8 /u:S
+Var=BPA_Protect_Status char 8,8 /u:P
+Var=BPA_Balance bit 16,1 /u:B
+Var=BPA_Neg_Rly bit 17,1 /u:Rly
+Var=BPA_Pos_Rly bit 18,1 /u:Rly
+Var=BPA_PreChar_Rly bit 19,1 /u:Rly
+Var=BPA_MSD_AUX bit 20,1 /u:F
+Var=BPA_Ah signed 48,16 /u:Ah /f:0.1 /min:-300 /max:300
+
+{RECEIVE}
+
+[BPA_ProtectState]
+ID=613h
+DLC=8
+Var=BPA_Wn_Dischager_OC bit 0,1 /u:F
+Var=BPA_Wn_Chager_OC bit 1,1 /u:F
+Var=BPA_Wn_SOC_OV bit 2,1 /u:F
+Var=BPA_Wn_SOC_UV bit 3,1 /u:F
+Var=BPA_Wn_OV bit 4,1 /u:F
+Var=BPA_Wn_UV bit 5,1 /u:F
+Var=BPA_Wn_Cell_OV bit 6,1 /u:F
+Var=BPA_Wn_Cell_UV bit 7,1 /u:F
+Var=BPA_Wn_Cell_UnbalV bit 8,1 /u:F
+Var=BPA_Wn_DisCharger_Cell_OT bit 9,1 /u:F
+Var=BPA_Wn_Charger_Cell_OT bit 10,1 /u:F
+Var=BPA_Wn_DisCharger_Cell_UT bit 11,1 /u:F
+Var=BPA_Wn_Charger_Cell_UT bit 12,1 /u:F
+Var=BSA_Wn_Cell_UnbalT bit 13,1 /u:F
+Var=BPA_Wn_Discharger_UnBPAWR bit 14,1 /u:F
+Var=BPA_Wn_Charger_UnBPAWR bit 15,1 /u:F
+Var=BPA_Prtct_Dischager_OC unsigned 24,1
+Var=BPA_Prtct_Chager_OC bit 25,1 /u:F
+Var=BPA_Prtct_SOC_OV bit 26,1 /u:F
+Var=BPA_Prtct_SOC_Un bit 27,1 /u:F
+Var=BPA_Prtct_OV bit 28,1 /u:F
+Var=BPA_Prtct_UV bit 29,1 /u:F
+Var=BPA_Prtct_Cell_OV bit 30,1 /u:F
+Var=BPA_Prtct_Cell_UV unsigned 31,1
+Var=BPA_Prtct_Cell_UnbalV bit 32,1 /u:F
+Var=BPA_Prtct_DisCharger_Cell_OT bit 33,1 /u:F
+Var=BPA_Prtct_Charger_Cell_OT bit 34,1 /u:F
+Var=BPA_Prtct_DisCharger_Cell_UT bit 35,1 /u:F
+Var=BPA_Prtct_Charger_Cell_UT bit 36,1 /u:F
+Var=BPA_Prtct_Cell_UnbalT bit 37,1 /u:F
+Var=BPA_Prtct_Discharger_UnBPAWR bit 38,1 /u:F
+Var=BPA_Prtct_Charger_UnBPAWR bit 39,1 /u:F
+Var=BPA_Prtct_Rly_Err bit 40,1 /u:F
+Var=BPA_Prtct_ISOSPI_Err bit 41,1 /u:F
+Var=BPA_Prtct_CAN_COM_Err bit 42,1 /u:F
+Var=BPA_Prtct_CT_COM_Err bit 43,1 /u:F
+Var=BPA_Prtct_ISORESIS_Err bit 44,1 /u:F
+
+{SENDRECEIVE}
+
+[BPA_POWER]
+ID=614h
+DLC=8
+Var=BPA_Charge_Cont_PL unsigned 0,16 /u:KW /f:0.1 /max:20
+Var=BPA_Discharge_Cont_PL unsigned 16,16 /u:kW /f:0.1 /max:20
+Var=BPA_Charge_Peak_PL unsigned 32,16 /u:kW /f:0.1 /max:20
+Var=BPA_Discharge_Peak_PL unsigned 48,16 /u:kW /f:0.1 /max:20
+
+{RECEIVE}
+
+[BPA_Volt_state]
+ID=615h
+DLC=8
+Var=BSA_Cell_MaxV unsigned 0,16 /u:V /f:0.001 /max:4.5
+Var=BPA_Cell_MinV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_Cell_AVGV unsigned 32,16 /u:V /f:0.001 /max:4.5
+Var=BPA_Cell_DeviV unsigned 48,16 /u:mV /max:1000
+
+[BPA_Temps_state]
+ID=616h
+DLC=8
+Var=BPA_Cell_MaxT signed 0,16 /u:deg /f:0.1 /min:-30 /max:100
+Var=BPA_Cell_MinT signed 16,16 /u:deg /f:0.1 /min:-30 /max:100
+Var=BPA_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+Var=BPA_Cell_DeviT unsigned 48,16 /u:deg /max:100
+
+[BPA_VT_Position]
+ID=617h
+DLC=8
+Var=BPA_Max_Volt_Pos unsigned 0,16 /u:VP /max:255
+Var=BPA_Min_Volt_Pos unsigned 16,16 /u:VP /max:255
+Var=BPA_Max_Temps_Pos unsigned 32,16 /u:TP /max:255
+Var=BPA_Min_Temps_pos unsigned 48,16 /u:TP /max:255
+
+[BPA_MD1_State]
+ID=618h
+DLC=8
+Var=BPA_BM1_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM1_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM1_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+[BPA_MD2_State]
+ID=619h
+DLC=8
+Var=BPA_BM2_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM2_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM2_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+[BPA_MD3_State]
+ID=61Ah
+DLC=8
+Var=BPA_BM3_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM3_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM3_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+[BPA_MD4_State]
+ID=61Bh
+DLC=8
+Var=BPA_BM4_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM4_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM4_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+[BPA_MD5_State]
+ID=61Ch
+DLC=8
+Var=BPA_BM5_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM5_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM5_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+[BPA_MD6_State]
+ID=61Dh
+DLC=8
+Var=BPA_BM6_Volt_Total unsigned 0,16 /u:V /f:0.1 /max:200
+Var=BPA_BM6_Cell_AVGV unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var=BPA_BM6_Cell_AVGT signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+
+{SENDRECEIVE}
+
+[BPA_HMI1_State]
+ID=701h
+DLC=8
+Var=Sys_Machine_Status unsigned 0,3 /u:SysMS
+Var=Rly_Machine_Status unsigned 3,3 /u:RlyMS
+Var=SOC_Machine_Status unsigned 8,2 /u:SocMS
+Var=SysDisChargeMode bit 10,1 /u:F
+Var=HMICOMEnable bit 11,1 /u:F
+Var=HMIBalanceMode bit 12,1 /u:F
+Var=NRlyDOStatus bit 13,1 /u:F
+Var=RRlyDOStatus bit 14,1 /u:F
+Var=ProRlyDOStatus bit 15,1 /u:F
+Var=ISOSPICOMERR bit 16,1 /u:F
+Var=INCANCOMERR unsigned 17,1
+Var=TCPIPTOMERR bit 18,1 /u:F
+Var=RS485COMERR bit 19,1 /u:F
+Var=ISORegERR bit 20,1 /u:F
+Var=MSDERR bit 21,1 /u:F
+Var=INITOK bit 22,1 /u:F
+Var=BalanceMode bit 23,1 /u:F
+Var=BalanceEnabnle bit 24,1 /u:F
+Var=Sys_Protect_Status unsigned 6,2 /u:Prtct /max:1
+
+[BPA_Cell_Voltage]
+ID=702h
+DLC=8
+Var=CellV_Num unsigned 0,16 /u:Num /max:255
+Var="Cell_Voltage_Num+0" unsigned 16,16 /u:V /f:0.001 /max:4.5
+Var="Cell_Voltage_Num+1" unsigned 32,16 /u:V /f:0.001 /max:4.5
+Var="Cell_Voltage_Num+2" unsigned 48,16 /u:V /f:0.001 /max:4.5
+
+[BPA_Cell_temperature]
+ID=703h
+DLC=8
+Var=CellT_Num unsigned 0,16 /u:Num /max:255
+Var="Cell_temperature_Num+0" signed 16,16 /u:deg /f:0.1 /min:-30 /max:100
+Var="Cell_temperature_Num+1" signed 32,16 /u:deg /f:0.1 /min:-30 /max:100
+Var="Cell_temperature_Num+2" signed 48,16 /u:deg /f:0.1 /min:-30 /max:100
+
+{RECEIVE}
+
+[BPA_CAN_RX_COUNT]
+ID=704h
+DLC=8
+Var=CT_Sensor_RxCount unsigned 0,16 /u:C /max:100
+Var=VCU_CAN_Rx_Count unsigned 16,16 /u:C /max:100
+Var=HMI_CAN_Rx_Count unsigned 32,16 /u:C /max:100
+
+{SEND}
+
+[BPA_ISOSPI_State]
+ID=705h
+DLC=8
+Var="Slave BMS ID number" unsigned 0,16 /u:Num /max:15
+Var=Slave_ID_Num_ISOSPI_COUNT unsigned 16,16 /u:C /max:200
+Var="Slave_ID_Num+1_ISOSPI_COUNT" unsigned 32,16 /u:C /max:200
+Var="Slave_ID_Num+2_ISOSPI_COUNT" unsigned 48,16 /u:C /max:200
+
+{RECEIVE}
+
+[CAB_CT]
+ID=3C2h
+DLC=8
+Var=IP_m unsigned 0,32 -h -m
+Var=ERR_Sta bit 32,1 /u:Err
+Var=ERR_Info unsigned 32,7 -h -m /u:Code /max:1
+Var=Variable1 unsigned 40,24 -m
